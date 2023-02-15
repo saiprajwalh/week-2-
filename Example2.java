@@ -1,24 +1,29 @@
-class Example2 {
+import java.util.Scanner;
+class Example1 {
   public static void main(String args[]) {
+    Scanner s = new Scanner(System.in);
  
-    byte b = 10;
-    short c = 12;
-    int a = 90;
-    long l = 100;
-    float d = 12.34f;
-    double e = 234.4;
-    char cc = 'A';
-    boolean bb = true;
-    String str = "Nagul";
-    System.out.println("Byte value is :" + b);
-    System.out.println("short value is :" + c);
-    System.out.println("int value is :" + a);
-    System.out.println("long value is :" + l);
-    System.out.println("float value is :" + d);
-    System.out.println("double value is :" + e);
-    System.out.println("char value is :" + cc);
-    System.out.println("boolean value is :" + bb);
-    System.out.println("String value is :" + str);
- 
+    System.out.println("Enter number to check it is perfect or not");
+    int num=s.nextInt();
+    int sum=0;
+    int count =0;
+     for(int k = 1; k <= 100; k++){
+       count =0;
+     for(int i=1;i<=num/2;i++){
+       if(num%i==0){
+         sum=sum+i;
+       }
+         count++;
+       }
+     }
+    if(sum==num){
+      System.out.println("perfect number");
+    }
+    else{
+      System.out.println("not a perfect number");
+    }
+    
+       
+    
   }
 }

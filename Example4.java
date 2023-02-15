@@ -1,23 +1,21 @@
-// WAP to accept 3 subjects marks and print total and avg marks.
+//WAP to check given number is amstrong number or not.
 import java.util.Scanner;
-class Example4 {
+class Example1 {
   public static void main(String args[]) {
+    Scanner s = new Scanner(System.in);
  
-    Scanner s=new Scanner(System.in);
+    System.out.println("Enter number");
+    int num=s.nextInt(); 
+    int ams = 0;
+  if (num!=0){
+        ams=ams*num;   
     
-    int sub1=0, sub2 =0, sub3 =0;
-    int total = 0, avg = 0;
- 
-    System.out.println("Enter 3 subjects scores");
-    sub1=s.nextInt();
-    sub2=s.nextInt();
-    sub3=s.nextInt();
+   System.out.println("amstrong: "+ams);
     
-    total = sub1 + sub2 + sub3;
-    avg = total / 3;
- 
-    System.out.println("total marks is : " + total);
-    System.out.println("Avg marks is : " + avg);
- 
+    else
+      System.out.println("not amstrong"+ams);
+  
+    
   }
+}
 }

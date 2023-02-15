@@ -1,27 +1,27 @@
+//wap to print prime numbers from1-100
 import java.util.Scanner;
-
-class Ebill {
-    public static void main(String[] args) {
-        
-        Scanner sc = new Scanner(System.in);
-
-        float unit;
-        float electric bill;
-
-      
-        System.out.println("Enter number : ");
-        unit = sc.nextInt();
-
-        if (unit <= 50) {
-            bill = unit * 0.50f;
-        } else if (unit > 50 && unit <= 150) {
-            bill = unit * 1.23f;
-        } else if (unit > 150 && unit <= 250) {
-            bill = unit * 1.90f;
-        } else {
-            bill = unit * 2.34f;
-        }
-
-        System.out.println("Electricity Bill is : " + electric bill);
+ 
+class Example1 {
+  public static void main(String args[]) {
+ 
+    Scanner s = new Scanner(System.in);
+    int count=0;
+    System.out.println("Enter number to check it is prime or not");
+    int num=s.nextInt();   // 50  --> 25       1- num/2
+ 
+    for(int i=1;i<=num/2;i++){
+      if(num%i==0){      // 50/25
+        count++; 
+      }
     }
+    
+    if(count==1){
+      System.out.println("prime number");
+    }    
+    else{
+      System.out.println("Not a prime number");
+    }
+    
+  }
 }
+

@@ -1,27 +1,29 @@
+///alternative prime number
 import java.util.Scanner;
-
-class GrossSalary2 {
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        float Salary = 0, DA = 0, HRA = 0, GrossSalary = 0;
-        System.out.println("Enter Basic Salary Amount : ");
-        Salary = sc.nextFloat();
-
-        if (Salary <= 10000) {
-            HRA = (67 * Salary) / 100;
-            DA = (78 * Salary) / 100;
-            GrossSalary = Salary + HRA + DA;
-        } else if (Salary > 10000 && Salary < 20000) {
-            HRA = (70 * Salary) / 100;
-            DA = (80 * Salary) / 100;
-            GrossSalary = Salary + HRA + DA;
-        } else {
-            HRA = (73 * Salary) / 100;
-            DA = (87 * Salary) / 100;
-            GrossSalary = Salary + HRA + DA;
+ 
+class Example1 {
+  public static void main(String args[]) {
+ 
+    Scanner s = new Scanner(System.in);
+    int count = 0,primecount=0;
+ 
+    for (int k = 1; k <= 100; k++) { // k=1,2,3,4,5,6,7...100
+ 
+      for (int i = 1; i <= k / 2; i++) { // 1<=1 count=2
+        if (k % i == 0) { // 3%1
+          count++;
         }
-
-        System.out.println("Gross Salary  is : " + GrossSalary);
-
+      }
+ 
+      if (count == 1) {
+           primecount++;
+        if(primecount%2!=0){
+        System.out.print(k + " "); // 2
+        }
+      }
+      count = 0;
     }
+ 
+  }
 }
+

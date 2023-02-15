@@ -1,14 +1,22 @@
-class Example3 {
+// WAP to print palindrome  of a given number.
+import java.util.Scanner;
+class Example1 {
   public static void main(String args[]) {
+    Scanner s = new Scanner(System.in);
  
-   String str="bitLabs";
-    int a=100;
-    int b=50;
- 
-    System.out.println(str+a+b);  //   bitLabs+100=> bitLabs100+50  ===> bitLabs10050
-    System.out.println(a+b+str);  //   100+50 --> 150+bitLabs  --> 150bitLabs 
-    System.out.println(b+str+a);  //   50+bitLabs-->  50bitLabs+100  -->50bitLabs100
+    System.out.println("Enter number");
+    int num=s.nextInt(); 
+    int pal=0;
     
- 
+     if (num!=0){
+        pal=pal*1+(num%10); 
+       num=num/10;  
+    }
+   System.out.println("palindrome: "+pal);
+    {
+    else
+      System.out.println("not palindrom"+pal);
+    }
+    
   }
 }

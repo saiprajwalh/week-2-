@@ -1,17 +1,18 @@
+// WAP to print reverse of a given number.
 import java.util.Scanner;
-class Example4 {
+class Example1 {
   public static void main(String args[]) {
+    Scanner s = new Scanner(System.in);
  
-    Scanner s=new Scanner(System.in);
-    int = num =0
-      System.out.println("enter the num value")
-      even = num%==0
-      odd = num%==1
-      num = 0
-      
-      System.out.println("num is even:"even)
-      System.out.println("num is odd:"odd)
-      System.out.println("num is zero:"zero)
-      }
+    System.out.println("Enter number to print reverse order");
+    int num=s.nextInt();  // 1234    -- 1 10  100  1000 10000 100000
+    int rev=0;
+    
+    while(num!=0){
+        rev=rev*10+(num%10);   // 0+4=> 40+3=>430+2=> 4320+1=>4321
+         num=num/10;  // 1
+    }
+   System.out.println("Reverse number: "+rev); 
+    
+  }
 }
-      

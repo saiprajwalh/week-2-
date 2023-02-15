@@ -1,24 +1,18 @@
+.// WAP to print number of digits of a given number using while loop.
 import java.util.Scanner;
-class Example4 {
+class Example1 {
   public static void main(String args[]) {
+    Scanner s = new Scanner(System.in);
  
-    Scanner s=new Scanner(System.in);
+    System.out.println("Enter number to find number of digits");
+    int num=s.nextInt();  // 78723
+     int digits=0;
+    while(num!=0){
+       num=num/10;    // 78723/10 ==> 0
+        digits++;     //5
+    }
+    System.out.println("Number of digits: "+digits);
     
-    int  salary=0 ,shp1=0, shp2 =0, shp3 =0;
-    int total = 0;
-    float percentage =0;
- 
-    System.out.println("Enter 3 shopping bils");
-    shp1=s.nextInt();
-    shp2=s.nextInt();
-    shp3=s.nextInt();
     
-    total = shp1 + shp2 + shp3;
-    percentage =(total/100)*salary;
- 
-    System.out.println("total shopping is : " + total);
-    System.out.println("percentage is : " + percentage);
-    System.out.println("salary is : " + salary);
- 
   }
 }

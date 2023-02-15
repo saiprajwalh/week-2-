@@ -1,21 +1,21 @@
-
+//1. WAP to find factors of a given number 
 import java.util.Scanner;
-
-class EligibleToVote {
-    public static void main(String[] args) {
-        // creating object of Scanner class
-        Scanner sc = new Scanner(System.in);
-
-        // Declaring vaiables
-        int age;
-
-        // Ask user to enter values
-        System.out.println("Enter Age : ");
-        age = sc.nextInt();
-
-        if (age < 18)
-            System.out.println("Not Eligible");
-        else
-            System.out.println("Yess! Eligible");
+ 
+class Example1 {
+  public static void main(String args[]) {
+ 
+    Scanner s = new Scanner(System.in);
+    int count=0;
+    System.out.println("Enter number to find factors");
+    int num=s.nextInt();   // 50  --> 25       1- num/2
+ 
+    for(int i=1;i<=num/2;i++){
+      if(num%i==0){      // 50/25
+        count++; 
+      }
     }
+    System.out.println("Number of factors: "+count);
+    
+    
+  }
 }
