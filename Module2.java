@@ -1,7 +1,3 @@
-//int arr[]={23,45,65,78,90,34,22}
-//enter new value:100
-//{100,23,45,65,78,90,34,22}
-//insert an element in first index position
 import java.util.Scanner;
  
 class Example1 {
@@ -25,6 +21,20 @@ class Example1 {
              no_elements++;
         }
   }
+public void insertLast(){    
+  System.out.println("Enter your value to insert in last index ");      int num=s.nextInt();       
+  if(no_elements==0){         
+    arr[0]=num;         
+    no_elements++;       
+  }    
+  else{        
+    arr[no_elements]=num;         
+    no_elements++;   
+  }     
+}
+
+
+  
   public void display(){
    for(int i=0;i<no_elements;i++){
      System.out.print(arr[i]+" ");
